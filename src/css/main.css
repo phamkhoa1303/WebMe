@@ -15,9 +15,6 @@ html,body{
     height: 100%;
     width: 100%;
 }
-.body{
-    background-color: rgb(204, 92, 92);
-}
 .GT1{
     background-color: rgb(193, 204, 92);
 }
@@ -26,4 +23,15 @@ html,body{
 }
 .footer{
     background-color: rgb(92, 113, 204);
+}
+
+#instructions {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    padding-top: 6px;
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
 }
