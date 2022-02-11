@@ -1,5 +1,6 @@
 window.onload = init;
 const int=null;
+let TextColor = Colors.DenHuyenBi;
 function init() {
   let root = new THREERoot({
     createCameraControls:false,
@@ -198,7 +199,7 @@ function TextAnimation(textGeometry) {
       ]
     },
     {
-      diffuse: Colors.LightGray //0000
+      diffuse: TextColor //0000
     }
   );
 

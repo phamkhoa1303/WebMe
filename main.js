@@ -1,12 +1,3 @@
-// let rootStyle = document.documentElement.style;
-// document.getElementById("toggle_darkmode").onclick = function (e){
-//     if (document.getElementById("toggle_darkmode").checked == true){
-//         rootStyle.setProperty("--darkmode-color",Colors.WhiteSmoke)
-//     } else {
-//         rootStyle.setProperty("--darkmode-color","#22201e")
-//     }
-// }
-
 const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
       toggle = body.querySelector(".toggle"),
@@ -30,6 +21,6 @@ modeSwitch.addEventListener("click" , () =>{
         modeText.innerText = "Light mode";
     }else{
         modeText.innerText = "Dark mode";
-        
+        TextColor = Colors.LightGray
     }
 });

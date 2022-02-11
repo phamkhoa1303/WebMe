@@ -307,5 +307,5 @@ let Colors = {
 
   Black: "#000000",
   
-  DenHuyenBi: "#100f0e",
+  DenHuyenBi: "#2c445a",
 };
