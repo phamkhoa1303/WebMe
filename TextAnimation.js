@@ -1,15 +1,14 @@
 window.onload = init;
-
+const int=null;
 function init() {
   let root = new THREERoot({
     createCameraControls:false,
 		antialias: true,
     fov:60
   });
-
- // we ll just setup the scene here
-
-  root.renderer.setClearColor(Colors.DenHuyenBi);
+  
+  // we ll just setup the scene here
+  root.renderer.setClearColor(0xffffff, 0);//Colors.DenHuyenBi
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 400);
 
@@ -39,7 +38,7 @@ function init() {
 // now choose the random text to be display
 
 function createTextAnimation() {
-  let geometry = generateTextGeometry('WELCOME TO KHOA\'WEBSITE', {
+  let geometry = generateTextGeometry('WELCOME TO KHOA\'S WEBSITE', {
     size:14,
     height:0,
     font:'droid sans',
@@ -199,7 +198,7 @@ function TextAnimation(textGeometry) {
       ]
     },
     {
-      diffuse: 0xffffff //0000
+      diffuse: Colors.ForestGreen //0000
     }
   );
 
@@ -223,7 +222,6 @@ Object.defineProperty(TextAnimation.prototype, 'animationProgress', {
 function THREERoot(params) {
   params = utils.extend({
     antialias:false,
-
     fov:60,
     zNear:1,
     zFar:10000,
@@ -232,7 +230,8 @@ function THREERoot(params) {
   }, params);
 
   this.renderer = new THREE.WebGLRenderer({
-    antialias:params.antialias
+    antialias:params.antialias,
+    alpha: true
   });
   document.getElementById('three-container').appendChild(this.renderer.domElement);
 
