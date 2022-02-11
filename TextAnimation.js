@@ -198,7 +198,7 @@ function TextAnimation(textGeometry) {
       ]
     },
     {
-      diffuse: Colors.ForestGreen //0000
+      diffuse: Colors.LightGray //0000
     }
   );
 
