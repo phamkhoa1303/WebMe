@@ -1,5 +1,4 @@
 window.onload = init;
-const int=null;
 let TextColor = Colors.DenHuyenBi;
 function init() {
   let root = new THREERoot({
@@ -9,9 +8,9 @@ function init() {
   });
   
   // we ll just setup the scene here
-  root.renderer.setClearColor(0xffffff, 0);//Colors.DenHuyenBi
+  // root.renderer.setClearColor(0xffffff, 0);//Colors.DenHuyenBi
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
-  root.camera.position.set(0, 0, 400);
+  root.camera.position.set(0, 0, 450);
 
 
 // now for animation let
@@ -35,7 +34,6 @@ function init() {
 
   createTweenScrubber(tl);
 }
-
 // now choose the random text to be display
 
 function createTextAnimation() {
@@ -157,7 +155,8 @@ function TextAnimation(textGeometry) {
       aEndPosition.array[i3 + v + 2] = z;
     }
   }
-
+  
+  this.color = TextColor;
   let material = new THREE.BAS.BasicAnimationMaterial({
       shading: THREE.FlatShading,
       side: THREE.DoubleSide,
@@ -199,7 +198,7 @@ function TextAnimation(textGeometry) {
       ]
     },
     {
-      diffuse: TextColor //0000
+      diffuse: this.color //0000
     }
   );
 
@@ -316,17 +315,17 @@ function createTweenScrubber(tween, seekSpeed) {
 
   // desktop
   let mouseDown = false;
-  document.body.style.cursor = 'pointer';
+  document.querySelector("#three-container").style.cursor = 'pointer';
 
   window.addEventListener('mousedown', function(e) {
     mouseDown = true;
-    document.body.style.cursor = 'ew-resize';
+    document.querySelector("#three-container").style.cursor = 'ew-resize';
     _cx = e.clientX;
     stop();
   });
   window.addEventListener('mouseup', function(e) {
     mouseDown = false;
-    document.body.style.cursor = 'pointer';
+    document.querySelector("#three-container").style.cursor = 'pointer';
     resume();
   });
   window.addEventListener('mousemove', function(e) {
