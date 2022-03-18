@@ -48,3 +48,12 @@ html,body{
     width: 100%;
     scroll-behavior: smooth;
 }
+#intro{
+    background-color: #333;
+}
+#activity{
+    background-color: #333;
+}
+#otherapp{
+    background-color: #333;
+}
